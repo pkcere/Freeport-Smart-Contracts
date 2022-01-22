@@ -85,6 +85,44 @@ module.exports = {
       chainId: 137,
       gas: 2e6,
       gasPrice: 80e9,
+    },
+    bsc_testnet: {
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: mnemonic
+        },
+        addressIndex: 1,
+        providerOrUrl:  `https://data-seed-prebsc-1-s1.binance.org:8545`,
+        chainId: 97,
+        pollingInterval: 30e3,
+      }),
+      network_id: 97,
+      confirmations: 1,
+      deploymentPollingInterval: 30e3,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      chainId: 97,
+      gas: 4e6,
+      gasPrice: 11e9,
+    },
+    avax_testnet: {
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: mnemonic
+        },
+        addressIndex: 1,
+        providerOrUrl:  `https://api.avax-test.network/ext/bc/C/rpc`,
+        chainId: 0xa869,
+        pollingInterval: 30e3,
+      }),
+      network_id: 0xa869,
+      confirmations: 1,
+      deploymentPollingInterval: 30e3,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      chainId: 0xa869,
+      gas: 4e6,
+      gasPrice: 11e9,
     }
   },
 
